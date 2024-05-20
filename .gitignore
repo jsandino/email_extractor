@@ -161,3 +161,6 @@ cython_debug/
 
 # Certificate to connect to Firebase server
 serviceAccount.json
+
+# Data directory with generated email files
+emails

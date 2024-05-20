@@ -1,6 +1,7 @@
 import sys
 from firebase import Firebase
 from tenant import Tenant
+from user_info import UserInfo
 
 
 def main():
@@ -37,9 +38,7 @@ def main():
 
 
 def extract_emails(tenant: Tenant):
-    tenant.extract_emails(
-        lambda firstName, email: print(f"First name {firstName}, email: {email}")
-    )
+    UserInfo.save_all(tenant=tenant)
 
 
 def get_input_values():
